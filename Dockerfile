@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt update 
 RUN apt -y upgrade
-RUN apt install openjdk-17-jre-headless
+RUN apt -y install openjdk-17-jre-headless
 
 ENV DEBIAN_FRONTEND interactive
 
