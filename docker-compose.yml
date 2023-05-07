@@ -1,6 +1,6 @@
 services:
   reamindmedatabase:
-    image: mysql/mysql-server:8.0.32 
+    image: mysql/mysql-server
     container_name: remindme_database
     ports:
       - 3306:3306
