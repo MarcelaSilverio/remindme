@@ -1,13 +1,4 @@
 services:
-  reamindmeapi:
-    image: marcelapsilverio/reamindmeapi:1.0
-    container_name: remindme_api
-    expose:
-      - 8080
-    ports:
-      - 8080
-    volumes:
-      - ./container:/code
   database:
     image: mysql/mysql-server:8.0.32 
     container_name: remindme_database
@@ -21,3 +12,14 @@ services:
         MYSQL_ROOT_PASSWORD: I98b7z5$
         MYSQL_USER: root
         MYSQL_PASSWORD: I98b7z5$
+  reamindmeapi:
+    image: marcelapsilverio/reamindmeapi:1.0
+    container_name: remindme_api
+    expose:
+      - 8080
+    ports:
+      - 8080
+    volumes:
+      - ./container:/code
+    depends_on:
+      - remindme_database
