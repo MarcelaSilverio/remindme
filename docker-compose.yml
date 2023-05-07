@@ -1,5 +1,5 @@
 services:
-  database:
+  reamindmedatabase:
     image: mysql/mysql-server:8.0.32 
     container_name: remindme_database
     ports:
@@ -22,4 +22,4 @@ services:
     volumes:
       - ./container:/code
     depends_on:
-      - remindme_database
+      - reamindmedatabase
