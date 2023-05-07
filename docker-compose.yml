@@ -9,6 +9,7 @@ services:
     volumes:
       - ./container:/code
   database:
+    image: mysql/mysql-server:8.0.32 
     container_name: remindme_database
     command: mysqld --sql_mode="ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION" --default-authentication-plugin=mysql_native_password
     ports:
