@@ -14,6 +14,6 @@ ENV DEBIAN_FRONTEND interactive
 EXPOSE 8080 8080
 
 #Launch commands
-ENTRYPOINT ["bash", "-c", "chmod +x startup.sh ; ./code/startup.sh"]
+ENTRYPOINT ["bash", "-c", "chmod +x ./code/startup.sh ; ./code/startup.sh"]
 
 
