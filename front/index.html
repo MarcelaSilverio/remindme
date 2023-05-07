@@ -9,7 +9,7 @@
 <body>
     <div id="reminder-form">
         <h1>New reminder</h1>
-        <form id="create-reminder-form">
+        <form id="create-reminder-form" action="">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
             <label for="date">Date</label>
@@ -20,12 +20,14 @@
     <hr>
     <div id="reminder-list">
         <h1>Don't forget: </h1>
-        <div id="reminder-content">
+        <div id="reminder-content-wrapper">
 
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="lib/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
-    <script src="index.js"></script>
+    <script src="js/deleteReminder.js"></script>
+    <script src="js/listReminder.js"></script>
+    <script src="js/createReminder.js"></script>
 </body>
 </html>

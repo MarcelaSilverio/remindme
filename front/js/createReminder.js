@@ -1,6 +1,4 @@
 $(document).ready( function () {
-    listAllReminders();
-
     $("#create-reminder-form").validate({
         rules : {
             name: {
@@ -34,9 +32,4 @@ $(document).ready( function () {
             });
         }
     });
-
-    $(".delete-reminder-btn").click(function() {
-        console.log('aaaa');
-    });
 });
-
