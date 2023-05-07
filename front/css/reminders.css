@@ -1,0 +1,32 @@
+#reminder-list {
+    padding-left: 30px;
+}
+
+#reminder-content-wrapper {
+    padding-left: 40px;
+}
+
+.delete-reminder-btn {
+    border-radius: 5px;
+    padding: 3px 8px;
+    border: none;
+    background-color: var(--alert-color);
+    color: var(--section-color);
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.delete-reminder-btn:hover {
+    cursor: pointer;
+    background-color: var(--light-alert-color);
+
+}
+
+.date-title {
+    color: var(--light-text-color);
+}
+
+.reminder-content {
+    padding-left: 20px;
+}

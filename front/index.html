@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/reminders.css">
     <title>Remindme</title>
 </head>
 <body>
     <div id="reminder-form">
         <h1>New reminder</h1>
         <form id="create-reminder-form" action="">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="date">Date</label>
-            <input type="date" id="date" name="date">
-            <input type="submit" value="Create">
+            <div class="fields-wrapper">
+                <div class="field-wrapper">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="field-wrapper">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+            </div>
+            <input class="submit-btn" type="submit" value="Create">
         </form>
     </div>
-    <hr>
     <div id="reminder-list">
         <h1>Don't forget: </h1>
         <div id="reminder-content-wrapper">
-
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="lib/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script src="js/deleteReminder.js"></script>
     <script src="js/listReminder.js"></script>
     <script src="js/createReminder.js"></script>
