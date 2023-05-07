@@ -23,7 +23,7 @@ $(document).ready( function () {
                 dataType: "json",
                 statusCode: {
                     400: function() {
-                        alert("Erro");
+                        alert("Error! To create a reminder, you should enter a name and a date in the future.");
                     },
                     201: function() {
                         document.location.reload(true);
