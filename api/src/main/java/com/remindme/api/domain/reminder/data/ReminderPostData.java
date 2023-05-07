@@ -1,5 +1,6 @@
-package com.remindme.api.reminder;
+package com.remindme.api.domain.reminder.data;
 
+import com.remindme.api.domain.reminder.Reminder;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
