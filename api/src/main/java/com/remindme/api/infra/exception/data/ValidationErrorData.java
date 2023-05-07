@@ -1,4 +1,4 @@
-package com.remindme.api.infra.data;
+package com.remindme.api.infra.exception.data;
 
 import org.springframework.validation.FieldError;
 

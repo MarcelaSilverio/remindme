@@ -1,6 +1,6 @@
-package com.remindme.api.infra;
+package com.remindme.api.infra.exception;
 
-import com.remindme.api.infra.data.ValidationErrorData;
+import com.remindme.api.infra.exception.data.ValidationErrorData;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

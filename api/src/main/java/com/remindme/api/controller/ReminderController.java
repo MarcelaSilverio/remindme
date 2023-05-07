@@ -4,7 +4,6 @@ import com.remindme.api.domain.reminder.Reminder;
 import com.remindme.api.domain.reminder.ReminderManager;
 import com.remindme.api.domain.reminder.data.ReminderPostData;
 import com.remindme.api.domain.reminder.data.ReminderGetData;
-import com.remindme.api.domain.reminder.ReminderRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
