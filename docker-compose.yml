@@ -22,4 +22,5 @@ services:
     volumes:
       - ./container:/code
     depends_on:
-      - reamindmedatabase
+      reamindmedatabase:
+        condition: service_healthy
