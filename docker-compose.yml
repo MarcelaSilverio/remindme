@@ -23,4 +23,4 @@ services:
       - ./container:/code
     depends_on:
       reamindmedatabase:
-        condition: service_healthy
+        condition: service_started
