@@ -3,14 +3,14 @@ $(document).ready( function () {
 });
 
 async function listReminders() {
-        let reminders = await getReminders();
-        let content = reminders === false ? "<p>Sorry! Something unexpected happened.</p>" : getRemindersList(reminders);
+        const reminders = await getReminders();
+        const content = reminders === false ? "<p>Sorry! Something unexpected happened.</p>" : getRemindersList(reminders);
         $("#reminder-content-wrapper").append(content);
 }
 
 async function getReminders() {
     try {
-        let remindersRequest = await fetch("http://localhost:8080/reminders");
+        const remindersRequest = await fetch("http://localhost:8080/reminders");
         
         return await remindersRequest.json();
     } catch (error) {
@@ -25,7 +25,7 @@ function getRemindersList(reminders) {
     let remindersList = "";
 
     Object.keys(remidersGroupedByDate).forEach((date) => {
-        let title = "<h2 class='date-title'>" + date + "</h2>";
+        const title = "<h2 class='date-title'>" + date + "</h2>";
         let remindersByDate = "";
 
         remidersGroupedByDate[date].forEach(reminder =>{
@@ -60,5 +60,13 @@ function groupRemindersByDate(reminders) {
 }
 
 function orderRemindersByDate(reminders) {
-    return reminders;
+    const sortedReminders = Object.keys(reminders)
+    .sort()
+    .reduce((accumulator, key) => {
+        accumulator[key] = reminders[key];
+
+        return accumulator;
+    }, {});
+
+    return sortedReminders;
 }
