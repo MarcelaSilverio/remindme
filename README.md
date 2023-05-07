@@ -44,7 +44,7 @@ or
     java -Dspring.profiles.active=prod -DDATASOURCE_URL=jdbc:mysql://localhost:3306/remindme -DDATASOURCE_USERNAME={YOUR_USER} -DDATASOURCE_PASSWORD={YOUR_PASSWORD} -jar api-0.0.1-SNAPSHOT.jar
 ```
 
-Once you have started the api, you can access the front using the HTML file: _/remindme/container/index.html_
+Once you have started the api, you can access the front opening the HTML file on the browser: _/remindme/container/index.html_
 
 ## The RESTful API
 
@@ -53,6 +53,22 @@ It is possible to access the API documentation using the url: _http://localhost:
 This Swagger documentation allows you to test the endpoints and see the schemas being used.
 
 There is also a json file on the repository that you can import to insomnia to check all the endpoints.
+
+## Project Details
+
+- The API was created using the Spring Boot Framework because it is simple and allows to integrate easily with other technologies. I used it alongside Maven that was managing the dependencies.
+
+- I created one unit test responsible to check if the post method returns 400 http code if invalid data is sent. I used the JUnit dependency to create it.
+
+- One import topic I tried to follow was the SOLID principles. They are very important, and allows our code to be easier to maintain and also prevents bugs from happening.
+
+- Some Desing Patterns were used in the project:
+    - Data transfer object (DTO)
+    - Repository pattern
+    - Service pattern
+
+
+
 
 
 
