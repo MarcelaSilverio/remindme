@@ -1,7 +1,9 @@
 services:
-  reamindmedatabase:
+  remindmedatabase:
     image: mysql/mysql-server
     container_name: remindme_database
+    networks:
+      - remindme-mysql
     ports:
       - 3306:3306
     volumes:
@@ -14,6 +16,8 @@ services:
         MYSQL_PASSWORD: I98b7z5$
   reamindmeapi:
     image: marcelapsilverio/reamindmeapi:1.0
+    networks:
+      - remindme-mysql
     container_name: remindme_api
     expose:
       - 8080
@@ -22,5 +26,6 @@ services:
     volumes:
       - ./container:/code
     depends_on:
-      reamindmedatabase:
-        condition: service_started
+      - remindmedatabase
+networks:
+  employee-mysql:
