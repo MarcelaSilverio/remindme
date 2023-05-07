@@ -6,4 +6,5 @@ change_permissions() {
 change_permissions api
 change_permissions front
 
+cd /code/api
 java -jar target/api-0.0.1-SNAPSHOT.jar
