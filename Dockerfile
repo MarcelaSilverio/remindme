@@ -12,6 +12,7 @@ ENV DEBIAN_FRONTEND interactive
 
 # Mapping porst 
 EXPOSE 8080 8080
+EXPOSE 3306 3306
 
 #Launch commands
 ENTRYPOINT ["bash", "-c", "chmod +x ./code/startup.sh ; ./code/startup.sh"]

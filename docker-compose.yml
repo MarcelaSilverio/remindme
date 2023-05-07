@@ -3,7 +3,7 @@ services:
     image: mysql/mysql-server:8.0.32 
     container_name: remindme_database
     ports:
-      - 3334:3306
+      - 3306:3306
     volumes:
       - ./database/entrypoint:/docker-entrypoint-initdb.d
       - ./database/others:/others
