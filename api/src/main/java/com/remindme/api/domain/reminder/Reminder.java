@@ -1,5 +1,6 @@
-package com.remindme.api.reminder;
+package com.remindme.api.domain.reminder;
 
+import com.remindme.api.domain.reminder.data.ReminderPostData;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -24,4 +25,5 @@ public class Reminder {
         this.name = reminder.name();
         this.date = reminder.date();
     }
+
 }
