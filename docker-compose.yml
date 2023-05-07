@@ -28,4 +28,4 @@ services:
     depends_on:
       - remindmedatabase
 networks:
-  employee-mysql:
+  remindme-mysql:
