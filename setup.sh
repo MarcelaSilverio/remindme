@@ -1,0 +1,1 @@
+cd ~/remindme/ && docker build -t marcelapsilverio/reamindmeapi:1.0 .

@@ -1,0 +1,23 @@
+services:
+  reamindmeapi:
+    image: marcelapsilverio/reamindmeapi:1.0
+    container_name: remindme_api
+    expose:
+      - 8080
+    ports:
+      - 8080
+    volumes:
+      - ./container:/code
+  database:
+    container_name: remindme_database
+    command: mysqld --sql_mode="ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION" --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3334:3306
+    volumes:
+      - ./database/entrypoint:/docker-entrypoint-initdb.d
+      - ./database/others:/others
+      - ./database/mysql:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: I98b7z5$
+        MYSQL_USER: root
+        MYSQL_PASSWORD: I98b7z5$
