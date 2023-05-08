@@ -14,7 +14,7 @@ If you want to check, it was supposed to work like this (the api was not connect
   ./setup.sh
 ```
 
-## Initial setup
+## Initial Setup
 
 Since I couldn't make the docker container work, to execute the project, your system should have the JDK17 installed. You can install it on a linux system using the command: 
 
